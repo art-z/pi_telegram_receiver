@@ -1,0 +1,21 @@
+services:
+  json-telegram-receiver:
+    build: .
+    container_name: json-telegram-receiver
+    restart: unless-stopped
+    environment:
+      APP_PORT: 8000
+      INCOMING_TOKEN: ${INCOMING_TOKEN}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID}
+      STT_FLUSH_INTERVAL_SECONDS: "5"
+      STT_MAX_PHRASES: "20"
+    ports:
+      - "6066:8000"
+
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
