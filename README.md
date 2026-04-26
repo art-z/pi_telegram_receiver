@@ -21,4 +21,4 @@ INCOMING_TOKEN=CHANGE_ME_SECRET_TOKEN
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 TELEGRAM_CHAT_ID=your_telegram_chat_id
 ```
-Сервис на текущем этапе не валидирует этот токен.
+Сервис на текущем этапе не валидирует INCOMING_TOKEN.
